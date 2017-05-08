@@ -21,11 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/Coupons', 'CouponController@index')->name('Coupons');
 Route::get('/AddCoupon', function () {
-    return view('Addcoupon');
+    return view('AddCoupon');
 });
 Route::post('/AddCoupon', 'CouponController@insert');
 
-//Don't allow reg.
    Route::any('/register', function() {
         echo "No URL found";
      });
